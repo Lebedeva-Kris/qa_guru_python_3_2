@@ -6,4 +6,5 @@ from selene.support.shared import browser
 def open_browser():
     b = browser.open('https://google.com')
     print("Браузер открыт")
-    return b
+    yield b
+    print ("Браузер закрыт!")
